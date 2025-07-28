@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0f0f0f;
+    color: #00ff90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.terminal {
+    background-color: #1a1a1a;
+    border: 2px solid #00ff90;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 30px #00ff90;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1.typing {
+    overflow: hidden;
+    border-right: 3px solid #00ff90;
+    white-space: nowrap;
+    margin: 0 auto 20px;
+    letter-spacing: 2px;
+    animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #00ff90 }
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #262626;
+    color: #00ff90;
+    font-size: 16px;
+    box-shadow: 0 0 10px #00ff90;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #00ff90;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00ffcc;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-shadow: 0 0 10px #00ff90;
+}

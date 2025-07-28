@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🛡️ Phishing Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="terminal">
+        <h1 class="typing">Welcome to Phish🔍Check Terminal</h1>
+        <form method="POST">
+            <label for="url">Enter Website URL:</label>
+            <input type="text" name="url" id="url" required>
+            <button type="submit">Scan Now 🚨</button>
+        </form>
+
+        {% if result %}
+            <div class="result">
+                <h2>Result: <span>{{ result }}</span></h2>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
